@@ -350,3 +350,42 @@ h1, h2, h3 {
   }
 }
 </style>
+<script>
+  // Chặn menu chuột phải
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Chặn các phím tắt DevTools (Bao gồm cả Windows và macOS)
+  document.addEventListener('keydown', function(e) {
+    // Chặn F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+    
+    // Chặn Ctrl+Shift+I (Windows) hoặc Cmd+Option+I (Mac)
+    if ((e.ctrlKey || e.metaKey) && (e.shiftKey || e.altKey) && (e.key === 'I' || e.key === 'i')) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Chặn Ctrl+Shift+J (Windows) hoặc Cmd+Option+J (Mac)
+    if ((e.ctrlKey || e.metaKey) && (e.shiftKey || e.altKey) && (e.key === 'J' || e.key === 'j')) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Chặn Ctrl+U (Windows) hoặc Cmd+Option+U (Mac) - Xem mã nguồn
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u')) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Chặn Ctrl+Shift+C (Windows) hoặc Cmd+Option+C (Mac) - Inspect Element
+    if ((e.ctrlKey || e.metaKey) && (e.shiftKey || e.altKey) && (e.key === 'C' || e.key === 'c')) {
+      e.preventDefault();
+      return false;
+    }
+  });
+</script>
