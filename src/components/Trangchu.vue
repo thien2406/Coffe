@@ -71,12 +71,15 @@
     </footer>
 
     <div class="floating-contact">
+      <a href="https://m.me/lan.thi.888457" target="_blank" class="contact-icon messenger-btn" title="Chat Messenger">
+  <svg viewBox="0 0 24 24" width="32" height="32" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.36 2 1.76 6.31 1.76 11.64c0 2.91 1.45 5.52 3.74 7.17v3.77a.64.64 0 0 0 .93.57l4.16-2.29c.45.06.92.1 1.41.1 5.64 0 10.24-4.31 10.24-9.64C22.24 6.31 17.64 2 12 2zm1.2 11.75l-2.4-2.56-4.68 2.56 5.14-5.46 2.44 2.56 4.64-2.56-5.14 5.46z"/>
+  </svg>
+</a>
       <a href="https://zalo.me/0859453545" target="_blank" class="contact-icon zalo-btn" title="Chat Zalo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" />
       </a>
-      <a href="https://facebook.com" target="_blank" class="contact-icon facebook-btn" title="Chat Facebook">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
-      </a>
+      
     </div>
   </div>
 </template>
@@ -210,7 +213,13 @@ h1, h2, h3 {
   font-size: 12px;
   color: var(--text-muted);
 }
+.messenger-btn {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 50%, #f355a0 100%);
+}
 
+.contact-icon svg {
+  display: block;
+}
 /* Hero Section cho Mobile */
 .hero {
   position: relative;
